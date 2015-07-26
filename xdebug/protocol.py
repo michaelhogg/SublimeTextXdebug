@@ -164,6 +164,7 @@ class Protocol(object):
         if int(length) == len(message):
             return message
         else:
+            # ProtocolException is not caught anywhere. Change to ProtocolConnectionException?
             raise ProtocolException("Length mismatch encountered while reading the Xdebug message")
 
     def read(self, return_string=False):
