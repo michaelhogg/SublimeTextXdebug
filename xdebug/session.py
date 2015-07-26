@@ -88,7 +88,7 @@ def connection_error(message):
         async_session = SocketHandler(ACTION_WATCH)
         async_session.start()
     # Reset layout
-    sublime.active_window().run_command('xdebug_layout')
+    sublime.active_window().run_command('xdebug_layout')  # This sets the layout instead of resetting it
     # Render breakpoint markers
     render_regions()
 
